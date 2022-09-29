@@ -1,0 +1,74 @@
+@import '../../styles/mixins/media-queries';
+
+.cho-container .mercadopago-button {
+    color: black;
+    padding: 20px !important;
+    background-color: #fff !important;
+    font-family: 'Press Start 2P', monospace !important;
+    border: 1px solid black;
+}
+
+.buy-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.welcome-text {
+    margin-bottom: 50px;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    &__base {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        user-select: none;
+        font-size: 10px;
+        line-height: 16px;
+        overflow-y: auto;
+        height: 100%;
+    }
+
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 0 auto;
+        padding: 16px;
+    }
+
+    &__coverLeft,
+    &__coverRight {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 20;
+        width: calc((100vw - 800px) / 2);
+        transform: translateZ(0);
+        display: none;
+        pointer-events: none;
+
+        @include above(xl) {
+            display: block;
+        }
+    }
+
+    &__coverLeft {
+        left: 0;
+        background: linear-gradient(to right, #fff 20%, rgba(255, 255, 255, 0));
+    }
+
+    &__coverRight {
+        right: 0;
+        background: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0));
+    }
+}
