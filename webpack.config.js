@@ -11,8 +11,8 @@ const pkg = require('./package.json');
 
 module.exports = (env, argv) => {
 
-    const DEV = argv.mode === 'development';
-    const PROD = argv.mode === 'production';
+    const DEV = false;
+    const PROD = true;
 
     const config = {
         devtool: DEV ? 'eval-source-map' : 'source-map',
