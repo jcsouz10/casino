@@ -64,11 +64,11 @@
 
   &__coverLeft {
     left: 0;
-    background: linear-gradient(to right, #fff 20%, black);
+    background: linear-gradient(to right, #fff 20%, RGB(255 255 255 / 0%));
   }
 
   &__coverRight {
     right: 0;
-    background: linear-gradient(to left, #fff 20%, black);
+    background: linear-gradient(to left, #fff 20%, RGB(255 255 255 / 0%));
   }
 }
