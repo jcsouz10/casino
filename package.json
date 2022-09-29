@@ -18,7 +18,7 @@
     "license": "MIT",
     "main": "index.js",
     "scripts": {
-        "start": "npm run start:dev",
+        "start": "node server.js",
         "start:dev": "webpack-dev-server --mode development --hot --progress",
         "start:prod": "webpack-dev-server --mode production --hot --progress",
         "build": "npm run build:prod",
@@ -36,6 +36,7 @@
     },
     "dependencies": {
         "core-js": "^3.23.5",
+        "express": "^4.18.1",
         "mercadopago": "^1.5.14"
     },
     "devDependencies": {
