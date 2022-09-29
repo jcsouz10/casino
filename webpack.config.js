@@ -1,10 +1,8 @@
 const path = require('path');
 
-const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -84,8 +82,6 @@ module.exports = (env, argv) => {
         },
 
         plugins: [
-            new ESLintPlugin({ fix: true }),
-
             new HtmlWebpackPlugin({
                 filename: path.resolve(__dirname, 'dist/index.html'),
                 template: path.resolve(__dirname, 'src/app/components/app/app.template.ejs'),
@@ -104,10 +100,6 @@ module.exports = (env, argv) => {
 
             new MiniCssExtractPlugin({
                 filename: PROD ? '[name].[contenthash].css' : '[name].[fullhash].css',
-            }),
-
-            new StyleLintPlugin({
-                fix: true,
             }),
 
             new CopyWebpackPlugin({
