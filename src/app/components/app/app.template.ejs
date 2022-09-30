@@ -81,16 +81,16 @@
                </ul>
             </div>
             <div class="buy-container"> 
-                <!-- 119077743-3c42a7a4-c9ba-4b0b-8f0c-198c63c12566 -->
+                
                 <script src="https://sdk.mercadopago.com/js/v2"></script>
                 <script>
-                    const mp = new MercadoPago('APP_USR-b1f61f59-515b-49d3-8a8a-babea33db6ef', {
+                    const mp = new MercadoPago('TEST-b2804f89-41b0-440f-8bf3-f61465a67ee2', {
                         locale: 'en-US'
                     })
                     const checkout = mp.checkout({
                         preference: {
-                            id: "119077743-807b73e7-f81e-4a78-8075-25fae868dee2",
-                        },
+                            id: "119077743-984e975d-ca54-4cbd-b47f-5870261ff6d0"
+                        }
                     });
                     checkout.render({
                         container: '.cho-container',
