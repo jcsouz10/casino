@@ -1,28 +1,24 @@
 const mercadopago = require ('mercadopago');
 // Add Your credentials
 mercadopago.configure({
-  access_token: 'TEST-415585518666585-050622-932ce1a48342385a47c09514c5761af8-119077743'
+  access_token: 'APP_USR-415585518666585-050622-c17f7d6c3717b37130dca9668548c51e-119077743'
 });
 
 let preference = {
     items: [
       {
-        title: 'PDF',
+        title: 'PDF casino doi2ss',
         unit_price: 100,
         quantity: 9999,
       }
-    ],
-    back_urls: {
-      "success": "https://casino-carlos.herokuapp.com/?status=pago"
-    },
-    auto_return: "approved"
+    ]
   };
 
 
 mercadopago.preferences.create(preference)
 .then(function(response){
 // This value replaces the String "<%= global.id %>" in your HTML
-  console.log(response.body)
+  console.log(response.body.id)
 }).catch(function(error){
   console.log(error);
 });
