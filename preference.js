@@ -14,14 +14,15 @@ let preference = {
     ],
     back_urls: {
       "success": "https://casino-carlos.herokuapp.com/?status=pago"
-  }
+    },
+    auto_return: "approved"
   };
 
 
 mercadopago.preferences.create(preference)
 .then(function(response){
 // This value replaces the String "<%= global.id %>" in your HTML
-  console.log(response.body.id)
+  console.log(response.body)
 }).catch(function(error){
   console.log(error);
 });
